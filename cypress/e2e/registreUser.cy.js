@@ -10,11 +10,10 @@ describe('User registration flow', () => {
     cy.get("a[href='/login']").should("contain", "Signup / Login").click();
     cy.contains("New User Signup!").should('be.visible');
     cy.get('[data-qa="signup-name"]').type('Raminta');
-    cy.get('[data-qa="signup-email"]').type('Raminta@dd.com');
+    cy.get('[data-qa="signup-email"]').type('Raminta@ee.com');
     cy.contains("button", "Signup").click();
     cy.contains("h2", "Enter Account Information").should('be.visible');
     cy.get('#id_gender2').should('be.visible').check();
-    cy.get('#name').should('be.visible').type('Raminta');
     cy.get('#password').should('be.visible').type('1a1a1aqaaa+++');
     cy.get('#days').should('be.visible').select('12');
     cy.get('#months').should('be.visible').select('September');
