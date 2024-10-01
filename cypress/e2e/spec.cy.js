@@ -5,54 +5,44 @@ describe('User registration flow', () => {
     cy.visit(pageUrl);
   });
 
-  it('should display the home page successfully', () => {
+  it('should display ', () => {
     cy.get('body').should('be.visible');
-  });
-
-  it('should navigate to the Signup/Login page', () => {
-    cy.get("a[href='/login']")
-      .should("contain", "Signup / Login")
-      .click();
-  });
-
-  it('should display the "New User Signup!" section', () => {
-    cy.get("a[href='/login']").click();
+    cy.get("a[href='/login']").should("contain", "Signup / Login").click();
     cy.contains("New User Signup!").should('be.visible');
-  });
-
-  it('should allow user to enter name and email, and proceed to signup', () => {
-    cy.get("a[href='/login']").click();
-    // Laukiame, kol elementas taps pasiekiamas ir matomas
-    cy.get('[data-qa="signup-name"]').should('be.visible').type('Raminta');
-    cy.get('[data-qa="signup-email"]').should('be.visible').type('Raminta@blabla.com');
-    // Patikriname mygtuko "Signup" buvimą ir jį paspaudžiame
-    cy.contains("button", "Signup").click();
-  });
-
-  it('should display the "Enter Account Information" page after signup', () => {
-    cy.get("a[href='/login']").click();
-    cy.get('[data-qa="signup-name"]').should('be.visible').type('Raminta');
-    cy.get('[data-qa="signup-email"]').should('be.visible').type('Raminta@blabla.com');
+    cy.get('[data-qa="signup-name"]').type('Raminta');
+    cy.get('[data-qa="signup-email"]').type('Raminta@dd.com');
     cy.contains("button", "Signup").click();
     cy.contains("h2", "Enter Account Information").should('be.visible');
-  });
-
-  it('should allow to fill details: should display the "Enter Account Information" page after signup', () => {
-    cy.get("a[href='/login']").click();
-    cy.get('[data-qa="signup-name"]').should('be.visible').type('Raminta');
-    cy.get('[data-qa="signup-email"]').should('be.visible').type('Raminta@blabla.com');
-    cy.contains("button", "Signup").click();
     cy.get('#id_gender2').should('be.visible').check();
     cy.get('#name').should('be.visible').type('Raminta');
-
-    // cy.get('#email', { timeout: 80000 }) // Wait up to 10 seconds for the email field
-    //   .should('be.visible')
-    //   .should('not.be.disabled')
-    //   .type('Raminta@blabla.com');
-
     cy.get('#password').should('be.visible').type('1a1a1aqaaa+++');
     cy.get('#days').should('be.visible').select('12');
     cy.get('#months').should('be.visible').select('September');
     cy.get('#years').should('be.visible').select('1989');
-  })
-})
+    cy.get('#newsletter').check();
+    cy.get('#newsletter').should('be.checked');
+    cy.get('#optin').check();
+    cy.get('#optin').should('be.checked');
+    cy.get('#first_name').should('be.visible').type('Raminta');
+    cy.get('#last_name').should('be.visible').type('Balalala');
+    cy.get('#company').should('be.visible').type('Pasaku salis');
+    cy.get('#address1').should('be.visible').type('Girios g.');
+    cy.get('#address2').should('be.visible').type('Girios g.');
+    cy.get('#country').should('be.visible').select('India');
+    cy.get('#state').should('be.visible').type('bla');
+    cy.get('#city').should('be.visible').type('bla');
+    cy.get('#zipcode').should('be.visible').type('12940eee');
+    cy.get('#mobile_number').should('be.visible').type('1234566777');
+    cy.contains("Create Account").should('be.visible');
+    cy.contains("button", "Create Account").click();
+    cy.contains("h2", "Account Created!").should('be.visible');
+    cy.get('[data-qa="continue-button"]').should("have.text", "Continue").click();
+    cy.get('.fa.fa-user').parent().should('contain', 'Logged in as Raminta');
+    cy.get("a[href='/delete_account']").should("contain", "Delete Account").click();
+    cy.contains("h2", "Account Deleted!").should('be.visible');
+    cy.get('[data-qa="continue-button"]').should("have.text", "Continue").click();
+  });
+});
+
+
+
