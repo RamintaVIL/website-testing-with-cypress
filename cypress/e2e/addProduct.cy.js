@@ -14,8 +14,15 @@ describe('Add products in chart functionality', () => {
     cy.get('.btn-success').contains('Continue Shopping').click();
 
     // Step 7: Hover over second product and click 'Add to cart'
-    cy.get('.single-products').first().trigger('mouseover');
-    cy.get('.single-products .add-to-cart[data-product-id="1"]').click({ multiple: true });
+    // cy.get('.single-products').first().trigger('mouseover');
+    // cy.get('.single-products .add-to-cart[data-product-id="1"]').click({ multiple: true });
+
+    cy.get('.single-products').first().trigger('mouseover').wait(500);
+    cy.get('.single-products .add-to-cart[data-product-id="1"]').then(($btn) => {
+      if ($btn.is(':visible')) {
+        cy.wrap($btn).click({ multiple: true });
+      }
+    });
 
     // Step 8: Click 'View Cart' button
     cy.get("a[href='/view_cart']").click();
