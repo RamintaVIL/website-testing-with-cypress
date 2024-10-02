@@ -1,4 +1,4 @@
-it('should let add product in chart', () => {
+it('should add a product to the cart successfully', () => {
   cy.visit("");
 
   // Verify that home page is visible successfully

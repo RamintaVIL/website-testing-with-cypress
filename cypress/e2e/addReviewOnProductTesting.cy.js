@@ -1,4 +1,4 @@
-it('should allow user to add a review to a product', () => {
+it('should allow the user to add a review for a product', () => {
   cy.visit("");
 
   // Click on 'Products' button
