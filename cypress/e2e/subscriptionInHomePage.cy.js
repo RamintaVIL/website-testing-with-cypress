@@ -1,4 +1,4 @@
-it('should allow user to add a review to a product', () => {
+it('should subscribe user successfully', () => {
   cy.visit("https://automationexercise.com");
   cy.get('a[href="/products"]').click();
   cy.get('body').should('be.visible');
