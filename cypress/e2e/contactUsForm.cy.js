@@ -13,8 +13,7 @@ it('should load contact us form and let it fill', () => {
   cy.get('[data-qa="subject"]').type("aaaaaaa");
   cy.get('[data-qa="message"]').type("asdjasdksjaflksajfklsafjlsfjsl");
   // Upload file
-  // cy.get('input[name="upload_file"]').attachFile('your_file_name.txt');
-  // Click 'Submit' button
+  cy.get('input[name="upload_file"]').selectFile('cypress/fixtures/example.json');
   cy.get('input[data-qa="submit-button"]').click();
   // Click OK button (galite naudoti cy.on() norint užfiksuoti alert)
   cy.on('window:alert', (str) => {
