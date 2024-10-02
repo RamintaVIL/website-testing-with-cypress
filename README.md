@@ -10,36 +10,36 @@ Automation Exercise is an e-commerce website that provides a variety of products
 
 Below are the 8 test cases implemented using Cypress:
 
-1. **Verify Home Page Loads Successfully**
+1. **Test Case 1: Register User**
 
-    - Check if the home page of the website loads correctly.
+    - To verify that a new user can successfully register on the Automation Exercise website.
 
-2. **Verify Product Categories**
+2. **Test Case 6: Contact Us Form**
 
-    - Ensure all product categories are displayed and accessible from the homepage.
+    - To ensure that the "Contact Us" form functions correctly and submits user inquiries.
 
-3. **Add Product to Cart**
+3. **Test Case 7: Verify Test Cases Page**
 
-    - Validate the process of adding a product to the shopping cart.
+    - To check that the test cases page loads correctly and displays all necessary test case information.
 
-4. **Verify Cart Functionality**
+4. **Test Case 9: Search Product**
 
-    - Confirm that users can view, update, and delete items in the shopping cart.
+    - To validate the search functionality of the website by searching for a specific product.
 
-5. **User Registration**
+5. **Test Case 10: Verify Subscription on Home Page**
 
-    - Test the user registration process and validate that new users can sign up.
+    - To verify that users can successfully subscribe to the newsletter from the homepage.
 
-6. **User Login**
+6. **UTest Case 13: Verify Product Quantity in Cart**
 
-    - Check the login functionality for registered users.
+    - To ensure that the correct product quantity is displayed in the shopping cart..
 
-7. **Search Functionality**
+7. **Test Case 17: Remove Products From Cart**
 
-    - Verify the search feature by searching for specific products.
+    - To validate that users can successfully remove products from their shopping cart.
 
-8. **Checkout Process**
-    - Test the end-to-end checkout process, ensuring users can complete a purchase.
+8. **Test Case 21: Add Review on Product**
+    - To verify that users can submit a review for a product.
 
 ## Installation
 
