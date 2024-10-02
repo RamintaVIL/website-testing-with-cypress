@@ -1,6 +1,5 @@
 it('should subscribe user successfully', () => {
   cy.visit("");
-  cy.get('a[href="/products"]').click();
   cy.get('body').should('be.visible');
   cy.scrollTo('bottom');
   cy.contains('Subscription').should('be.visible');
