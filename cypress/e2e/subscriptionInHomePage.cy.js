@@ -1,5 +1,5 @@
 it('should subscribe user successfully', () => {
-  cy.visit("https://automationexercise.com");
+  cy.visit("");
   cy.get('a[href="/products"]').click();
   cy.get('body').should('be.visible');
   cy.scrollTo('bottom');

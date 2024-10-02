@@ -1,5 +1,5 @@
 it('should load test cases page', () => {
-  cy.visit("https://automationexercise.com");
+  cy.visit("");
   cy.get('body').should('be.visible');
   cy.get("a[href='/products']").should("contain", "Products").click();
   cy.contains('All Products').should('be.visible');

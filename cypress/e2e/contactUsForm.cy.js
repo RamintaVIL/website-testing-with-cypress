@@ -1,6 +1,6 @@
 it('should load contact us form and let it fill', () => {
   // Launch browser
-  cy.visit("https://automationexercise.com");
+  cy.visit("");
   // Verify that home page is visible successfully
   cy.get('body').should('be.visible');
   // Click on 'Contact Us' button

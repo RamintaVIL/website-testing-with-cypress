@@ -1,5 +1,5 @@
 it('should allow user to add a review to a product', () => {
-  cy.visit("https://automationexercise.com");
+  cy.visit("");
   cy.get('a[href="/products"]').click();
   cy.contains('All Products').should('be.visible');
   cy.get('a[href="/product_details/1"]').click();
