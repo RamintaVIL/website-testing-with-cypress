@@ -1,4 +1,4 @@
-it('should load contact us form and let it fill', () => {
+it('should load and submit the Contact Us form successfully', () => {
   cy.visit("");
 
   // Verify that home page is visible successfully
