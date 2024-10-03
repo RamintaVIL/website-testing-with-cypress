@@ -27,7 +27,7 @@ it('should register a user successfully and delete the account ', () => {
 
     // Click 'Continue' button and verify user is logged in
     cy.get('[data-qa="continue-button"]').should("have.text", "Continue").click();
-    cy.get('.fa-user').parent().should('contain', 'Logged in as Raminta');
+    cy.contains('Logged in as Raminta').should('be.visible');
 
     // Delete the account and verify 'Account Deleted!' message
     cy.get("a[href='/delete_account']").should("contain", "Delete Account").click();
