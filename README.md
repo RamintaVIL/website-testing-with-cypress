@@ -55,9 +55,7 @@ To get the project set up locally, follow these steps:
 1. Clone the repository:
 
 ```
-git clone
-https://github.com/RamintaVIL/website-testing-with-cypress
-cd website-testing-with-cypress
+git clone: https://github.com/RamintaVIL/website-testing-with-cypress
 ```
 
 2. Install the necessary dependencies:
