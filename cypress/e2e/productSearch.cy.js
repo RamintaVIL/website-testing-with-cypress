@@ -10,9 +10,6 @@ it('should load search results for a product', () => {
   cy.contains('Searched Products').should('be.visible');
 
   // Verify all the products related to search are visible
-  cy.get('a[href="#Men"]').click();
-  cy.get('a[href="/category_products/6"]').type('Jeans');
-
   cy.get('.features_items')
     .should('have.length.greaterThan', 0)
     .each(($el) => {
