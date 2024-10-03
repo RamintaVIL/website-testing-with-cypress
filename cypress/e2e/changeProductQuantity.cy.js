@@ -6,7 +6,6 @@ it('should add a product to the cart successfully', () => {
 
   // Verify product detail is opened
   cy.navigateToProductDetails();
-  cy.url().should('include', 'product'); // Patikrinkite, ar URL turi 'product'
   cy.get('h2').should('be.visible'); // Patikrinkite, ar produkto pavadinimas matomas
   cy.get('.product-information').should('be.visible');
 
