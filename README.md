@@ -36,7 +36,7 @@ The following test cases have been implemented using Cypress:
 
 ✅ **Test Case 21: Add Review on Product**
 
-    -   Validates that users can submit a product review.
+    - Validates that users can submit a product review.
 
 ## 🎯 Getting Started
 
