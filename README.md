@@ -36,7 +36,7 @@ The following test cases have been implemented using Cypress:
 
 ✅ **Test Case 21: Add Review on Product**
 
--   Validates that users can submit a product review.
+    -   Validates that users can submit a product review.
 
 ## 🎯 Getting Started
 
@@ -74,7 +74,7 @@ There are two ways to run Cypress tests:
 
 If you want to see the tests running step-by-step in a graphical interface, use the interactive mode. This will open a Cypress Test Runner where you can select specific test files and view their execution in a browser:
 
-```
+```bash
 npm run test
 ```
 
@@ -82,7 +82,7 @@ npm run test
 
 If you prefer to run all tests in the background without opening a browser, use headless mode. This is faster and runs the tests directly in the terminal:
 
-```
+```bash
 npm run test:cmd
 ```
 
@@ -94,7 +94,7 @@ Once the tests are complete, the results will be displayed, including the number
 
 ### 🙋🏽‍♀️ Authors
 
-[RamintaVIL] ((https://github.com/RamintaVIL))
+[RamintaVIL](https://github.com/RamintaVIL)
 
 ### 📜 License
 
