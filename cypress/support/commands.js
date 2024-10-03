@@ -9,9 +9,18 @@ Cypress.Commands.add('navigateToProductDetails', () => {
 });
 
 Cypress.Commands.add('addProductToCart', (quantity) => {
-    cy.navigateToProductDetails(); // Eiti į produkto detalių puslapį
-    cy.get('h2').should('be.visible'); // Patikrinti, ar antraštė matoma
-    cy.get('.product-information').should('be.visible'); // Patikrinti, ar produktų informacija matoma
-    cy.get('input[name="quantity"]').clear().type(quantity); // Įvesti kiekį
-    cy.get('.cart').click(); // Spustelėti ant krepšelio
+    cy.navigateToProductDetails();
+    cy.get('h2').should('be.visible');
+    cy.get('.product-information').should('be.visible');
+    cy.get('input[name="quantity"]').clear().type(quantity);
+    cy.get('.cart').click();
+});
+
+Cypress.Commands.add('navigateToContactUsPage', () => {
+    // Verify that home page is visible successfully
+    cy.get('body').should('be.visible');
+    // Click on 'Contact Us' button
+    cy.get('a[href="/contact_us"]').should('contain', 'Contact us').click();
+    // Verify 'GET IN TOUCH' is visible
+    cy.contains('Get In Touch').should('be.visible');
 });

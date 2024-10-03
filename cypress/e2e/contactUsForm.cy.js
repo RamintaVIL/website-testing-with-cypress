@@ -1,26 +1,19 @@
 it('should load and submit the Contact Us form successfully', () => {
   cy.visit("");
+  cy.navigateToContactUsPage();
 
-  // Verify that home page is visible successfully
-  cy.get('body').should('be.visible');
-
-  // Click on 'Contact Us' button
-  cy.get('a[href="/contact_us"]').should('contain', 'Contact us').click();
-
-  // Verify 'GET IN TOUCH' is visible
-  cy.contains('Get In Touch').should('be.visible');
-
-  // Enter name, email, subject and message
-  cy.get('[data-qa="name"]').type('Raminta');
-  cy.get('[data-qa="email"]').type('Raminta@blabla');
-  cy.get('[data-qa="subject"]').type("aaaaaaa");
-  cy.get('[data-qa="message"]').type("asdjasdksjaflksajfklsafjlsfjsl");
-
+  // Enter name, email, subject and message using data from fixture
+  cy.fixture('contactUsData').then((data) => {
+    cy.get('[data-qa="name"]').type(data.name),
+      cy.get('[data-qa="email"]').type(data.email),
+      cy.get('[data-qa="subject"]').type(data.subject),
+      cy.get('[data-qa="message"]').type(data.message);
+  });
   // Upload file
   cy.get('input[name="upload_file"]').selectFile('cypress/fixtures/example.json');
   cy.get('input[data-qa="submit-button"]').click();
 
-  // Click OK button (galite naudoti cy.on() norint užfiksuoti alert)
+  // Click OK button (galite naudoti cy.on() norint užfiksuoti alert
   cy.on('window:alert', (str) => {
     expect(str).to.equal('Your details have been submitted successfully.');
   });
