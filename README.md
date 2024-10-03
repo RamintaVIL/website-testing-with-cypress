@@ -34,7 +34,9 @@ The following test cases have been implemented using Cypress:
 
     - Ensures users can successfully remove items from their shopping cart.
 
-✅ **Test Case 21: Add Review on Product** - Validates that users can submit a product review.
+✅ **Test Case 21: Add Review on Product**
+
+-   Validates that users can submit a product review.
 
 ## 🎯 Getting Started
 
@@ -42,9 +44,9 @@ The following test cases have been implemented using Cypress:
 
 Before you can run the test cases locally, ensure you have the following installed:
 
--   **Node.js** (v12 or later) – [Download Node.js](https://nodejs.org)
+-   **Node.js** – [Download Node.js](https://nodejs.org)
 -   **NPM** (included with Node.js) or **Yarn**
--   **Git** – [Download Git] (https://git-scm.com)
+-   **Git** – [Download Git](https://git-scm.com)
 
 ### 💻 Installation
 
@@ -73,7 +75,7 @@ There are two ways to run Cypress tests:
 If you want to see the tests running step-by-step in a graphical interface, use the interactive mode. This will open a Cypress Test Runner where you can select specific test files and view their execution in a browser:
 
 ```
-npx cypress open
+npm run test
 ```
 
 2. Headless Mode
@@ -81,7 +83,7 @@ npx cypress open
 If you prefer to run all tests in the background without opening a browser, use headless mode. This is faster and runs the tests directly in the terminal:
 
 ```
-npx cypress run
+npm run test:cmd
 ```
 
 After running the tests in headless mode, you will see the results in your terminal, including details on any failed or passed tests.
@@ -92,8 +94,8 @@ Once the tests are complete, the results will be displayed, including the number
 
 ### 🙋🏽‍♀️ Authors
 
-RamintaVIL: Github
+[RamintaVIL] ((https://github.com/RamintaVIL))
 
 ### 📜 License
 
-Distributed under the ISC License. See LICENSE.txt for more information.
+Distributed under the ISC License. See [LICENSE.txt](./LICENSE.txt) for more information.
