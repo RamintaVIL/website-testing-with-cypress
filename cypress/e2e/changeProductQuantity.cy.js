@@ -1,17 +1,9 @@
 it('should add a product to the cart successfully', () => {
   cy.visit("");
-
-  // Verify that home page is visible successfully
-  cy.get('body').should('be.visible');
-  cy.contains('Home').should('be.visible');
-
-  // Click 'View Product' for any product on home page
-  cy.get("a[href='/products']").click();
-
-  // Click on specific product
-  cy.get('a[href="/product_details/1"]').click();
+  cy.navigateToProductsPage();
 
   // Verify product detail is opened
+  cy.navigateToProductDetails();
   cy.url().should('include', 'product'); // Patikrinkite, ar URL turi 'product'
   cy.get('h2').should('be.visible'); // Patikrinkite, ar produkto pavadinimas matomas
   cy.get('.product-information').should('be.visible');

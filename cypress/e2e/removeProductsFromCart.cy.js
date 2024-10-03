@@ -1,11 +1,10 @@
 it('should successfully remove a product from the cart', () => {
   cy.visit("");
-  cy.get('body').should('be.visible');
+  cy.navigateToProductsPage();
 
   // Add products to cart
-  cy.get('a[href="/product_details/1"]').click();
-  cy.url().should('include', 'product'); // Patikrinkite, ar URL turi 'product'
-  cy.get('h2').should('be.visible'); // Patikrinkite, ar produkto pavadinimas matomas
+  cy.navigateToProductDetails();
+  cy.get('h2').should('be.visible');
   cy.get('.product-information').should('be.visible');
   cy.get('input[name="quantity"]').clear().type('1');
   cy.get('.cart').click();
@@ -15,9 +14,6 @@ it('should successfully remove a product from the cart', () => {
 
   // Click 'View Cart' button
   cy.contains('View Cart').click();
-
-  // Verify that cart page is displayed
-  // cy.url().should('include', 'view_cart'); // Patikrinkite, ar esate krepšelio puslapyje
 
   // Click 'X' button corresponding to particular product
   cy.get('i.fa.fa-times').click();
