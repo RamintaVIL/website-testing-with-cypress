@@ -13,7 +13,7 @@ it('should load and submit the Contact Us form successfully', () => {
   cy.get('input[name="upload_file"]').selectFile('cypress/fixtures/example.json');
   cy.get('input[data-qa="submit-button"]').click();
 
-  // Click OK button (galite naudoti cy.on() norint užfiksuoti alert
+  // Click OK button 
   cy.on('window:alert', (str) => {
     expect(str).to.equal('Your details have been submitted successfully.');
   });

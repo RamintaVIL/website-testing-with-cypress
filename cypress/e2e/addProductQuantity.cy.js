@@ -6,7 +6,7 @@ it('should add a product to the cart successfully', () => {
 
   // Verify product detail is opened
   cy.navigateToProductDetails();
-  cy.get('h2').should('be.visible'); // Patikrinkite, ar produkto pavadinimas matomas
+  cy.get('h2').should('be.visible');
   cy.get('.product-information').should('be.visible');
 
   // Increase quantity to 4
