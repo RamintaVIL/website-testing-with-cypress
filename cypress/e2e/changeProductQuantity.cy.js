@@ -1,4 +1,6 @@
 it('should add a product to the cart successfully', () => {
+  const quantityToAdd = 4;
+
   cy.visit("");
   cy.navigateToProductsPage();
 
@@ -9,7 +11,7 @@ it('should add a product to the cart successfully', () => {
   cy.get('.product-information').should('be.visible');
 
   // Increase quantity to 4
-  cy.get('input[name="quantity"]').clear().type('4');
+  cy.get('input[name="quantity"]').clear().type(quantityToAdd);
 
   // Click 'Add to cart' button
   cy.get('.cart').click();
@@ -21,7 +23,7 @@ it('should add a product to the cart successfully', () => {
   cy.contains('View Cart').click();
 
   // Verify that product is displayed in cart page with exact quantity
-  cy.get('.cart_quantity').should('contain.text', '4');
+  cy.get('.cart_quantity').should('contain.text', quantityToAdd);
 });
 
 

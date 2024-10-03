@@ -1,13 +1,9 @@
 it('should successfully remove a product from the cart', () => {
+  const quantityToAdd = 2;
+
   cy.visit("");
   cy.navigateToProductsPage();
-
-  // Add products to cart
-  cy.navigateToProductDetails();
-  cy.get('h2').should('be.visible');
-  cy.get('.product-information').should('be.visible');
-  cy.get('input[name="quantity"]').clear().type('1');
-  cy.get('.cart').click();
+  cy.addProductToCart(quantityToAdd);
 
   // Verify that product is added to the cart
   cy.get('#cartModal').should('contain', 'Added');
