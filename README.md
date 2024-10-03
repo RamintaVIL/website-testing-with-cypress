@@ -45,7 +45,7 @@ The following test cases have been implemented using Cypress:
 Before you can run the test cases locally, ensure you have the following installed:
 
 -   **Node.js** – [Download Node.js](https://nodejs.org)
--   **NPM** (included with Node.js) or **Yarn**
+-   **NPM** (included with Node.js)
 -   **Git** – [Download Git](https://git-scm.com)
 
 ### 💻 Installation
