@@ -44,7 +44,7 @@ Before you can run the test cases locally, ensure you have the following install
 
 -   **Node.js** (v12 or later) – [Download Node.js](https://nodejs.org)
 -   **NPM** (included with Node.js) or **Yarn**
--   **Git** – Download Git
+-   **Git** – [Download Git] (https://git-scm.com)
 
 ### 💻 Installation
 
